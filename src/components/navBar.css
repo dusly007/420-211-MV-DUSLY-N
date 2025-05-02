@@ -1,0 +1,27 @@
+
+nav {
+    display: flex; /* flexbox */
+    justify-content: center; /*centrer */
+    background: #2C3E50; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* petite ombre */
+    padding: 12px; 
+  }
+  
+
+  nav a {
+    color: #ECF0F1; 
+    text-decoration: none; /*soulignement par défaut */
+    margin: 0 12px; 
+    padding: 8px 12px; 
+    border-radius: 3px; 
+    transition: background 0.3s ease, transform 0.2s ease; /* hover*/
+  }
+  
+  
+  nav a:hover,
+  nav a.active {
+    background: #34495E; 
+    color: #3498DB; 
+    transform: translateY(-2px); /* effet */
+  }
+  
