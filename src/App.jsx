@@ -5,6 +5,7 @@ import Interest from './pages/interest'
 import Home from './pages/Home'
 import NavBAr from './components/NavBAr'
 import './App.css'
+import Footer from './components/Footer'
 import {  Routes, Route } from "react-router-dom"
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/projectForm" element={<ProjectForm />} />
         <Route path="/interest" element={<Interest />} />
       </Routes>
+      <Footer/>
     </>
   
   )

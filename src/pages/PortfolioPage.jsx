@@ -2,7 +2,10 @@ import React from 'react'
 
 function PortfolioPage() {
   return (
-    <h1>portfolioPage</h1>
+    <div>
+      <h1>portfolioPage</h1>
+      
+    </div>
   )
 }
 
