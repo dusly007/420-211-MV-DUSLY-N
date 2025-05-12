@@ -1,74 +1,141 @@
-/* portFolioPage.css */
+/*reference: https://www.w3schools.com/css/css3_shadows_box.asp 
+  https://www.w3schools.com/css/css3_variables.asp
+  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties*/
+
+
+/*disponibles partout dans la page*/
+  :root {
+  --bg: #f0f4f8;  
+  --card: #fff; /*Couleur de fond pour les cartes */
+  --accent: #3182ce; /*Couleur principale pour les détails importants */
+  --accent-dark: #2b6cb0; /* survol ou pour l’interaction*/
+  --title: #2a4365; 
+  --subtitle: #2c5282; 
+  --muted: #4a5568; /*Couleur pour les textes secondaires */
+  --text: #333;  
+  --light: #f9fafb; /* Couleur de fond plus claire*/
+}
+
 body, .portfolio-page, .portfolio-contenu {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  color: #333;
+  font-family: 'Segoe UI', sans-serif; /*police principale du site*/
+  color: var(--text);
+  background: var(--bg);
 }
+
 .portfolio-page {
-  background: #f5f5f5;
-  padding: 30px 0;
   display: flex;
   justify-content: center;
+  padding: 40px 0;
 }
+
 .portfolio-contenu {
-  background: #fff;
+  background: var(--card);
   width: 90%;
-  max-width: 680px;
-  padding: 25px;
-  border-radius: 6px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  max-width: 720px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
+
 .portfolio-titre {
   text-align: center;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   letter-spacing: 1px;
-  color: #2a4365;
+  color: var(--title);
 }
-.section-personnelle {
-  background: #fafafa;
-  margin-bottom: 25px;
-  padding: 15px;
-  border-radius: 5px;
-  transition: 0.2s;
+
+.section-personnelle, .section-professionnelle {
+  background: var(--light);
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s; /*transition effet de survol*/
 }
-.section-personnelle:hover {
+
+.section-personnelle:hover, .section-professionnelle:hover {
   background: #fff;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
+
 .titre {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 12px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 4px;
-  color: #2c5282;
+  margin-bottom: 16px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #e2e8f0;
+  color: var(--subtitle);
 }
-.contenu-personnelle {
+
+.contenu-personnelle, .contenu-professionnelle {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
+
+/*écran est d'au moins 600 pixels, s'affichent en ligne et sont alignés en haut */
 @media (min-width: 600px) {
-  .contenu-personnelle { flex-direction: row; align-items: flex-start; }
+  .contenu-personnelle, .contenu-professionnelle {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
+
 .avatar {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #3182ce;
-  transition: transform 0.2s;
+  object-fit: cover; /*'image couvre entièrement conteneur*/
+  border: 3px solid var(--accent);
+  transition: 0.3s;
 }
-.avatar:hover { transform: scale(1.1); border-color: #2b6cb0; }
-.text-contenu-personnelle { margin-left: 15px; }
-.nom { font-size: 20px; font-weight: bold; margin-bottom: 8px; color: #1a365d; }
-.traits, .interets { font-size: 14px; margin-bottom: 8px; line-height: 1.4; }
-.traits { font-style: italic; color: #4a5568; }
-.interets { color: #2c5282; }
-p { margin: 0 0 8px; line-height: 1.5; color: #555; }
-.text-contenu-personnelle p { padding-left: 8px; border-left: 3px solid #3182ce; }
+
+.avatar:hover {
+  transform: scale(1.1);
+  border-color: var(--accent-dark);
+}
+
+.text-contenu-personnelle, .text-contenu-professionnelle {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.nom {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1a365d;
+}
+
+.traits, .interets {
+  font-style: italic;
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+
+.interets { color: var(--subtitle); }
+
+.text-contenu-personnelle p,
+.text-contenu-professionnelle p {
+  margin: 0 0 12px;
+  padding: 12px 16px;
+  border-left: 4px solid var(--accent);
+  background: var(--light);
+  border-radius: 8px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  transition: 0.3s;
+}
+
+.text-contenu-personnelle p:hover,
+.text-contenu-professionnelle p:hover {
+  background: var(--card);
+  border-left-color: var(--accent-dark);
+  color: var(--accent);
+  transform: translateX(4px);
+}
