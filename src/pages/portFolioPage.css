@@ -1,0 +1,74 @@
+/* portFolioPage.css */
+body, .portfolio-page, .portfolio-contenu {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+.portfolio-page {
+  background: #f5f5f5;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+.portfolio-contenu {
+  background: #fff;
+  width: 90%;
+  max-width: 680px;
+  padding: 25px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.portfolio-titre {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  color: #2a4365;
+}
+.section-personnelle {
+  background: #fafafa;
+  margin-bottom: 25px;
+  padding: 15px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+.section-personnelle:hover {
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.titre {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+  color: #2c5282;
+}
+.contenu-personnelle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+@media (min-width: 600px) {
+  .contenu-personnelle { flex-direction: row; align-items: flex-start; }
+}
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #3182ce;
+  transition: transform 0.2s;
+}
+.avatar:hover { transform: scale(1.1); border-color: #2b6cb0; }
+.text-contenu-personnelle { margin-left: 15px; }
+.nom { font-size: 20px; font-weight: bold; margin-bottom: 8px; color: #1a365d; }
+.traits, .interets { font-size: 14px; margin-bottom: 8px; line-height: 1.4; }
+.traits { font-style: italic; color: #4a5568; }
+.interets { color: #2c5282; }
+p { margin: 0 0 8px; line-height: 1.5; color: #555; }
+.text-contenu-personnelle p { padding-left: 8px; border-left: 3px solid #3182ce; }

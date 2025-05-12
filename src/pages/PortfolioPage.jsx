@@ -1,18 +1,26 @@
 import React from 'react'
+import "./portFolioPage.css"
 
 function PortfolioPage() {
   return (
-    <div>
-      <main>
-        <h1>portfolioPage</h1>
-        <section>
-          <h2>Présentation personnelle</h2>
-          {/**
-           *mon nom(peut être dans un h3)
-           une photo ou avatar (peut être dans un div)
-           quelques traits personnalité(sous le h3 de mon nom)
-           intérêts professionnels, passions, loisirs, etc(sous le h3 de mon nom)
-             */ }
+    <div className='portfolio-page'>
+      <main className='portfolio-contenu'>
+        <h1 className='portfolio-titre'>portfolioPage</h1>
+        <section className='section-personnelle'>
+          <h2 className='titre'>Présentation personnelle</h2>
+          <div className='contenu-personnelle'>
+            {/*RAJOUTE UNE IMAGE*/}
+            <img src="" alt="Mon Avatar" className='avatar' />
+            <div className='text-contenu-personnelle'>
+              <h3 className='nom'>Dusly Nestor</h3>
+              <p className='traits'>Je suis compétitif, persévérant, drôle, curieux de nature et toujours prêt à apprendre de nouvelles choses.</p>
+              <p className='interets'>
+              Intérêts professionnels : informatique en général, développement web, devenir entrepreneur<br />
+              Passions : regarder et faire du sport(principalement le basket)<br />
+              Loisirs: jeux video, gym
+              </p>
+            </div>
+          </div>
         </section>
 
         <section>
