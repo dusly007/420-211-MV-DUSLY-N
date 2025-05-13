@@ -5,7 +5,7 @@ import { useState } from 'react'
 function PortfolioPage() {
   //il faudra un state pour mes projets
   const [projects, setProjects] = useState([])
-  // il faudra une fonction pour ajouter projet(pt dans App)
+  // il faudra une fonction pour ajouter projet(pt dans App ou dans Form)
 
 
   return (
