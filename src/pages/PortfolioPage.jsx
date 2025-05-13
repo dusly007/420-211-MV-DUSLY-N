@@ -1,7 +1,13 @@
 import React from 'react'
 import "./portFolioPage.css"
+import { useState } from 'react'
 
 function PortfolioPage() {
+  //il faudra un state pour mes projets
+  const [projects, setProjects] = useState([])
+  // il faudra une fonction pour ajouter projet(pt dans App)
+
+
   return (
     <div className='portfolio-page'>
       <main className='portfolio-contenu'>
