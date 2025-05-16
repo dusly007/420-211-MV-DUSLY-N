@@ -6,7 +6,7 @@ import ProjectForm from './ProjectForm.jsx'
 import projet from '../assets/projets.js'
 
 function PortfolioPage() {
-  //il faudra un state pour mes projets
+ 
   const [projects, setProjects] = useState(projet)
   // il faudra une fonction pour ajouter projet(pt dans App ou dans Form)
   function handleAdd(newProject) {
