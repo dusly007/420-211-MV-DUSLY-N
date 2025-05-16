@@ -7,7 +7,17 @@ function ProjectForm() {
     techs: ''
   })
   //il faudra surement un handlechange pour mettre a jour State
+    function handleChange(e) {
+    const { name, value } = e.target;
+    setForm(prev => ({ ...prev, [name]: value }));
+  }
   //il faudra surement un handleSubmit pour rafraichissement de ma page
+  function handleClick(event) {
+    event.preventDefault(); // empêcher le rafraîchissement
+    form.titre && form.description
+      ? (onAdd(form), setForm({ titre: '', description: '', techs: '' }))
+      : null;
+  }
   return (
     <div>
       <h1>projectForm</h1>
@@ -19,7 +29,7 @@ function ProjectForm() {
       <input
         name="titre"
         value={form.titre}
-        onChange=""
+        onChange={handleChange}
         required
       />
 
@@ -27,7 +37,7 @@ function ProjectForm() {
       <textarea
         name="description"
         value={form.description}
-        onChange=""
+        onChange={handleChange}
         required
       />
 
@@ -36,10 +46,10 @@ function ProjectForm() {
       <input
         name="techs"
         value={form.techs}
-        onChange=""
+        onChange={handleChange}
       />
 
-      <button type="submit">Ajouter</button>
+      <button type="submit" onClick={handleClick}>Ajouter</button>
       </form>  
     </div>
   )

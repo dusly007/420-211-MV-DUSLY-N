@@ -12,3 +12,5 @@ const projet = [
         techs: 'IDE,React'}
 
 ] 
+
+export default projet

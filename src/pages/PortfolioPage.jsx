@@ -1,11 +1,17 @@
 import React from 'react'
 import "./portFolioPage.css"
+
 import { useState } from 'react'
+import ProjectForm from './ProjectForm.jsx'
+import projet from '../assets/projets.js'
 
 function PortfolioPage() {
   //il faudra un state pour mes projets
-  const [projects, setProjects] = useState([])
+  const [projects, setProjects] = useState(projet)
   // il faudra une fonction pour ajouter projet(pt dans App ou dans Form)
+  function handleAdd(newProject) {
+    setProjects(prev => [...prev, newProject]);
+  }
 
 
   return (
@@ -40,6 +46,15 @@ function PortfolioPage() {
 
         <section>
           <h2>Projets informatiques</h2>
+          <ul className="liste-projets">
+            {projects.map((proj, index) => (
+              <li key={index} className="projet">
+                <h3>{proj.titre}</h3>
+                <p>{proj.description}</p>
+                <p><strong>Technos :</strong> {proj.techs}</p>
+              </li>
+            ))}
+          </ul>
       
         </section>
       </main>
