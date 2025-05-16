@@ -43,3 +43,8 @@ semane 1:
 + ajouter Sara en collab
 + choisir un Api
 + faire un plan de travail
+
+semaine2:
+
++ continuer sur le formulaire
++ ensuite travailler sur l'API

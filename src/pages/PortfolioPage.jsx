@@ -40,6 +40,7 @@ function PortfolioPage() {
 
         <section>
           <h2>Projets informatiques</h2>
+      
         </section>
       </main>
     </div>
