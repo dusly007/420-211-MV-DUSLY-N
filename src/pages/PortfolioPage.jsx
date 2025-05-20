@@ -20,7 +20,7 @@ function PortfolioPage() {
         <section className='section-personnelle'>
           <h2 className='titre'>Présentation personnelle</h2>
           <div className='contenu-personnelle'>
-            
+            {/*https://getavataaars.com/?accessoriesType=Blank&avatarStyle=Circle&clotheColor=Red&clotheType=Hoodie&eyeType=Default&eyebrowType=RaisedExcitedNatural&facialHairColor=Black&facialHairType=MoustacheMagnum&graphicType=Diamond&hairColor=Black&mouthType=Smile&skinColor=Black&topType=LongHairDreads*/}
             <img src={avatarImage} alt="Mon Avatar" className='avatar' />
             <div className='text-contenu-personnelle'>
               <h3 className='nom'>Dusly Nestor</h3>

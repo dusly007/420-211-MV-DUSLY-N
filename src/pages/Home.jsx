@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <div className="home">
-      <h1>Bienvenue sur mon ePortfolio</h1>
+      <h1>Bienvenue sur mon Portfolio</h1>
       <p>Je suis Dusly Nestor, étudiant en informatique passionné par le développement web.</p>
       <img src={avatar} alt="avatar" className="avatar-home" />
 
