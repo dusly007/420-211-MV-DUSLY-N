@@ -1,0 +1,79 @@
+/* Formulaire projet - simplifié */
+.projet-form {
+    background: #f9fafb;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    max-width: 480px;
+    margin: 3rem auto;
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  .projet-form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  .projet-form h2::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 4px;
+    background: #3182ce;
+    border-radius: 2px;
+    margin: 0.5rem auto 0;
+  }
+  
+  .projet-form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #2c5282;
+  }
+  
+  .projet-form input,
+  .projet-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: white;
+  }
+  
+  .projet-form input:focus,
+  .projet-form textarea:focus {
+    border-color: #2b6cb0;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(49, 130, 206, 0.15);
+  }
+  
+  .projet-form button {
+    display: block;
+    margin: 2rem auto 0;
+    padding: 0.75rem 2rem;
+    background: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .projet-form button:hover {
+    background: #2b6cb0;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  
+  @media (max-width: 600px) {
+    .projet-form {
+      margin: 2rem 1rem;
+      padding: 1.5rem;
+    }
+  }
+  

@@ -14,17 +14,17 @@ function App() {
 
 
   return(
-    <>
+    <div className="app-wrapper">
       <Header/>
       <NavBAr></NavBAr>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/portefolioPage" element={<PortfolioPage />} />
         <Route path="/projectForm" element={<ProjectForm />} />
         <Route path="/interest" element={<Interest />} />
       </Routes>
       <Footer/>
-    </>
+    </div>
   
   )
 }

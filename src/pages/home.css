@@ -1,0 +1,60 @@
+.home {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .avatar-home {
+    width: 150px;
+    border-radius: 50%;
+    margin: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0, 122, 204, 0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .avatar-home:hover {
+    transform: scale(1.05) rotate(3deg);
+  }
+  
+  .citation {
+    font-style: italic;
+    margin: 1rem 0 2rem;
+    background: #e6f0fa;
+    padding: 1rem 1.5rem;
+    border-left: 5px solid #007acc;
+    border-radius: 5px;
+    color: #004a99;
+    box-shadow: inset 2px 0 5px rgba(0, 122, 204, 0.2);
+    user-select: text;
+  }
+  
+  .home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    background-color: #007acc;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 0 3px 7px rgba(0, 122, 204, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #005b99;
+    box-shadow: 0 6px 14px rgba(0, 91, 153, 0.6);
+  }
+  

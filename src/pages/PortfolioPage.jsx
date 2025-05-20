@@ -2,7 +2,6 @@ import React from 'react'
 import "./portFolioPage.css"
 
 import { useState } from 'react'
-import ProjectForm from './ProjectForm.jsx'
 import projet from '../assets/projets.js'
 import avatarImage from '../assets/avataaars.png' 
 function PortfolioPage() {
