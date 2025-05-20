@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import "./projectForm.css"
 
 
-function ProjectForm() {
+function ProjectForm({ onAdd }) {
   const [form, setForm] = useState({
     titre: '',
     description: '',
     techs: ''
   })
   //il faudra surement un handlechange pour mettre a jour State
-    function handleChange(e) {
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm(prev => ({ ...prev, [name]: value }));
-  }
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
   //il faudra surement un handleSubmit pour rafraichissement de ma page
   function handleClick(event) {
     event.preventDefault(); // empêcher le rafraîchissement

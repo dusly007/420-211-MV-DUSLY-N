@@ -1,16 +1,9 @@
 import React from 'react'
 import "./portFolioPage.css"
 
-import { useState } from 'react'
-import projet from '../assets/projets.js'
 import avatarImage from '../assets/avataaars.png' 
-function PortfolioPage() {
+function PortfolioPage({ projects }) {
  
-  const [projects, setProjects] = useState(projet)
-  // il faudra une fonction pour ajouter projet(pt dans App ou dans Form)
-  function handleAdd(newProject) {
-    setProjects(prev => [...prev, newProject]);
-  }
 
 
   return (
