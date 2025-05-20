@@ -4,7 +4,7 @@ import "./portFolioPage.css"
 import { useState } from 'react'
 import ProjectForm from './ProjectForm.jsx'
 import projet from '../assets/projets.js'
-
+import avatarImage from '../assets/avataaars.png' 
 function PortfolioPage() {
  
   const [projects, setProjects] = useState(projet)
@@ -21,8 +21,8 @@ function PortfolioPage() {
         <section className='section-personnelle'>
           <h2 className='titre'>Présentation personnelle</h2>
           <div className='contenu-personnelle'>
-            {/*RAJOUTE UNE IMAGE*/}
-            <img src="" alt="Mon Avatar" className='avatar' />
+            
+            <img src={avatarImage} alt="Mon Avatar" className='avatar' />
             <div className='text-contenu-personnelle'>
               <h3 className='nom'>Dusly Nestor</h3>
               <p className='traits'>Je suis compétitif, persévérant, drôle, curieux de nature et toujours prêt à apprendre de nouvelles choses.</p>
