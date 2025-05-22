@@ -8,12 +8,12 @@ function ProjectForm({ onAdd }) {
     description: '',
     techs: ''
   })
-  //il faudra surement un handlechange pour mettre a jour State
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
-  //il faudra surement un handleSubmit pour rafraichissement de ma page
+  
   function handleClick(event) {
     event.preventDefault(); // empêcher le rafraîchissement
     form.titre && form.description
@@ -23,7 +23,6 @@ function ProjectForm({ onAdd }) {
   return (
     <div>
       <h1>projectForm</h1>
-      {/*il faudra le handleSubmit dans mon form*/}
       <form className='projet-form'>
         <h2 className="titre">Ajouter un projet</h2>
 

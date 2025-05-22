@@ -15,12 +15,12 @@
     border-radius: 50%;
     margin: 1rem 0;
     box-shadow: 0 4px 10px rgba(0, 122, 204, 0.3);
-    transition: transform 0.3s ease;
-    cursor: pointer;
+    transition: transform 0.3s ease; /* Animation quand on passe souris dessus */
+    cursor: pointer; /* Change curseur sur image */
   }
   
   .avatar-home:hover {
-    transform: scale(1.05) rotate(3deg);
+    transform: scale(1.05) rotate(3deg); /* Agrandit ,fait tourner l’image au survol */
   }
   
   .citation {
